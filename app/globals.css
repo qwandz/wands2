@@ -1,20 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-indigo: #1e1b3a;
-  --color-plum: #4a2c5e;
-  --color-cream: #f7f2e8;
+  --color-background: #faf6ef;
+  --color-card: #fffdf8;
+  --color-foreground: #2e2a27;
+  --color-rose: #b76e82;
+  --color-sage: #8f9e73;
+  --color-olive: #5f6b4a;
   --color-gold: #c9a24b;
   --color-lavender: #b9a9d6;
 
-  --color-background: #1e1b3a;
-  --color-foreground: #f7f2e8;
-  --color-surface: #4a2c5e;
-  --color-muted: #b9a9d6;
-  --color-accent: #c9a24b;
-
   --font-heading: var(--font-cormorant), ui-serif, Georgia, serif;
   --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-script: var(--font-dancing), "Segoe Script", cursive;
 }
 
 @layer base {
@@ -27,7 +25,7 @@
   }
 
   ::selection {
-    background-color: var(--color-gold);
-    color: var(--color-indigo);
+    background-color: var(--color-lavender);
+    color: var(--color-foreground);
   }
 }

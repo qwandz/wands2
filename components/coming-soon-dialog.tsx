@@ -6,9 +6,9 @@ import { Sparkles, X } from "lucide-react"
 
 const variantClasses = {
   primary:
-    "bg-[var(--color-gold)] text-[var(--color-indigo)] hover:bg-[var(--color-gold)]/90",
+    "bg-[var(--color-gold)] text-[var(--color-foreground)] hover:bg-[var(--color-gold)]/90",
   secondary:
-    "border border-[var(--color-gold)]/50 text-[var(--color-cream)] hover:bg-[var(--color-plum)]/50",
+    "border border-[var(--color-gold)]/50 text-[var(--color-foreground)] hover:bg-[var(--color-card)]/50",
 }
 
 export function ComingSoonButton({
@@ -37,7 +37,7 @@ export function ComingSoonButton({
         onClick={(event) => {
           if (event.target === dialogRef.current) dialogRef.current?.close()
         }}
-        className="m-auto w-[calc(100%-2rem)] max-w-md rounded-3xl border border-[var(--color-gold)]/40 bg-[var(--color-indigo)] p-0 text-[var(--color-cream)] backdrop:bg-[var(--color-indigo)]/80"
+        className="m-auto w-[calc(100%-2rem)] max-w-md rounded-3xl border border-[var(--color-gold)]/40 bg-[var(--color-background)] p-0 text-[var(--color-foreground)] backdrop:bg-[var(--color-background)]/80"
       >
         <div className="flex flex-col gap-4 p-6">
           <div className="flex items-start justify-between gap-4">
@@ -49,16 +49,16 @@ export function ComingSoonButton({
               type="button"
               onClick={() => dialogRef.current?.close()}
               aria-label="Close dialog"
-              className="rounded-full border border-[var(--color-gold)]/40 p-1.5 text-[var(--color-cream)] transition hover:bg-[var(--color-plum)]/50"
+              className="rounded-full border border-[var(--color-gold)]/40 p-1.5 text-[var(--color-foreground)] transition hover:bg-[var(--color-card)]/50"
             >
               <X className="h-4 w-4" />
             </button>
           </div>
 
-          <h2 id={titleId} className="font-heading text-2xl text-[var(--color-cream)]">
+          <h2 id={titleId} className="font-heading text-2xl text-[var(--color-foreground)]">
             {label} opens with the next release
           </h2>
-          <p className="text-sm leading-6 text-[var(--color-lavender)]">
+          <p className="text-sm leading-6 text-[var(--color-olive)]">
             Checkout and swap proposals are not live yet. Join the waitlist and we will email you the
             moment they open.
           </p>
@@ -66,7 +66,7 @@ export function ComingSoonButton({
           <Link
             href="/#waitlist"
             onClick={() => dialogRef.current?.close()}
-            className="inline-flex items-center justify-center rounded-full bg-[var(--color-gold)] px-5 py-2.5 text-sm font-semibold text-[var(--color-indigo)] transition hover:bg-[var(--color-gold)]/90"
+            className="inline-flex items-center justify-center rounded-full bg-[var(--color-gold)] px-5 py-2.5 text-sm font-semibold text-[var(--color-foreground)] transition hover:bg-[var(--color-gold)]/90"
           >
             Join the waitlist
           </Link>

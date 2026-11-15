@@ -24,8 +24,8 @@ function FilterLink({
       aria-current={active ? "true" : undefined}
       className={`rounded-lg px-3 py-2 text-sm transition ${
         active
-          ? "bg-[var(--color-gold)] font-semibold text-[var(--color-indigo)]"
-          : "text-[var(--color-lavender)] hover:bg-[var(--color-plum)]/50 hover:text-[var(--color-cream)]"
+          ? "bg-[var(--color-gold)] font-semibold text-[var(--color-foreground)]"
+          : "text-[var(--color-olive)] hover:bg-[var(--color-card)]/50 hover:text-[var(--color-foreground)]"
       }`}
     >
       {children}
@@ -110,7 +110,7 @@ export function FilterPanel({
       {hasActiveFilters && (
         <Link
           href={basePath}
-          className="text-sm font-medium text-[var(--color-gold)] underline underline-offset-4 transition hover:text-[var(--color-cream)]"
+          className="text-sm font-medium text-[var(--color-gold)] underline underline-offset-4 transition hover:text-[var(--color-foreground)]"
         >
           Clear all filters
         </Link>
@@ -136,8 +136,8 @@ export function SortControl({ basePath, filters }: { basePath: string; filters: 
             aria-current={active ? "true" : undefined}
             className={`rounded-full px-3 py-1.5 text-xs font-medium transition ${
               active
-                ? "bg-[var(--color-gold)] text-[var(--color-indigo)]"
-                : "text-[var(--color-lavender)] hover:text-[var(--color-cream)]"
+                ? "bg-[var(--color-gold)] text-[var(--color-foreground)]"
+                : "text-[var(--color-olive)] hover:text-[var(--color-foreground)]"
             }`}
           >
             {option.label}

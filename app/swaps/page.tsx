@@ -35,15 +35,15 @@ export default async function SwapsPage({
   const activeCount = countActiveFilters(filters)
 
   return (
-    <div className="bg-[var(--color-indigo)] py-12 sm:py-16">
+    <div className="bg-[var(--color-background)] py-12 sm:py-16">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">
           Trade, don&apos;t buy
         </p>
-        <h1 className="mt-3 font-heading text-4xl text-[var(--color-cream)] sm:text-5xl">
+        <h1 className="mt-3 font-heading text-4xl text-[var(--color-foreground)] sm:text-5xl">
           Swaps
         </h1>
-        <p className="mt-3 max-w-2xl text-base leading-7 text-[var(--color-lavender)]">
+        <p className="mt-3 max-w-2xl text-base leading-7 text-[var(--color-olive)]">
           Some pieces are better traded than sold. These sellers will take a piece from your collection
           instead of payment, and every listing says what they are hoping to find.
         </p>
@@ -52,13 +52,13 @@ export default async function SwapsPage({
           {swapSteps.map((step, index) => (
             <li
               key={step.title}
-              className="rounded-2xl border border-[var(--color-gold)]/30 bg-[var(--color-plum)]/30 p-5"
+              className="rounded-2xl border border-[var(--color-gold)]/30 bg-[var(--color-card)]/30 p-5"
             >
               <span className="font-heading text-2xl text-[var(--color-gold)]">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <h2 className="mt-2 font-heading text-lg text-[var(--color-cream)]">{step.title}</h2>
-              <p className="mt-1 text-sm leading-6 text-[var(--color-lavender)]">{step.body}</p>
+              <h2 className="mt-2 font-heading text-lg text-[var(--color-foreground)]">{step.title}</h2>
+              <p className="mt-1 text-sm leading-6 text-[var(--color-olive)]">{step.body}</p>
             </li>
           ))}
         </ol>
@@ -70,7 +70,7 @@ export default async function SwapsPage({
 
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-center justify-between gap-3">
-              <p className="text-sm text-[var(--color-lavender)]">
+              <p className="text-sm text-[var(--color-olive)]">
                 {results.length} {results.length === 1 ? "swap" : "swaps"} available
               </p>
               <div className="flex items-center gap-2">

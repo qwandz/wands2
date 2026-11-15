@@ -34,11 +34,11 @@ export default async function SellerPage({ params }: { params: Promise<{ id: str
   ).length
 
   return (
-    <div className="bg-[var(--color-indigo)] py-10 sm:py-14">
+    <div className="bg-[var(--color-background)] py-10 sm:py-14">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <Link
           href="/browse"
-          className="inline-flex items-center gap-2 text-sm text-[var(--color-lavender)] transition hover:text-[var(--color-cream)]"
+          className="inline-flex items-center gap-2 text-sm text-[var(--color-olive)] transition hover:text-[var(--color-foreground)]"
         >
           <ArrowLeft className="h-4 w-4" />
           Back to the market
@@ -58,7 +58,7 @@ export default async function SellerPage({ params }: { params: Promise<{ id: str
 
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-center gap-3">
-              <h1 className="font-heading text-4xl text-[var(--color-cream)] text-balance sm:text-5xl">
+              <h1 className="font-heading text-4xl text-[var(--color-foreground)] text-balance sm:text-5xl">
                 {seller.name}
               </h1>
               {seller.verifiedMaker && (
@@ -69,7 +69,7 @@ export default async function SellerPage({ params }: { params: Promise<{ id: str
               )}
             </div>
 
-            <div className="mt-3 flex flex-wrap items-center gap-4 text-sm text-[var(--color-lavender)]">
+            <div className="mt-3 flex flex-wrap items-center gap-4 text-sm text-[var(--color-olive)]">
               <span className="inline-flex items-center gap-1.5">
                 <MapPin className="h-4 w-4 text-[var(--color-gold)]" />
                 {seller.location}
@@ -80,7 +80,7 @@ export default async function SellerPage({ params }: { params: Promise<{ id: str
               </span>
             </div>
 
-            <p className="mt-4 max-w-2xl text-base leading-7 text-[var(--color-lavender)]">
+            <p className="mt-4 max-w-2xl text-base leading-7 text-[var(--color-olive)]">
               {seller.bio}
             </p>
           </div>
@@ -88,11 +88,11 @@ export default async function SellerPage({ params }: { params: Promise<{ id: str
 
         <section className="mt-10">
           <div className="flex flex-wrap items-baseline justify-between gap-3">
-            <h2 className="font-heading text-2xl text-[var(--color-cream)] sm:text-3xl">
+            <h2 className="font-heading text-2xl text-[var(--color-foreground)] sm:text-3xl">
               {sellerListings.length} {sellerListings.length === 1 ? "listing" : "listings"}
             </h2>
             {swapCount > 0 && (
-              <p className="text-sm text-[var(--color-lavender)]">{swapCount} open to swaps</p>
+              <p className="text-sm text-[var(--color-olive)]">{swapCount} open to swaps</p>
             )}
           </div>
 
@@ -109,7 +109,7 @@ export default async function SellerPage({ params }: { params: Promise<{ id: str
               ))}
             </div>
           ) : (
-            <p className="mt-6 rounded-2xl border border-dashed border-[var(--color-gold)]/40 px-6 py-12 text-center text-sm leading-6 text-[var(--color-lavender)]">
+            <p className="mt-6 rounded-2xl border border-dashed border-[var(--color-gold)]/40 px-6 py-12 text-center text-sm leading-6 text-[var(--color-olive)]">
               {seller.name} has not listed anything yet. Check back after the next new moon.
             </p>
           )}

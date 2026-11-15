@@ -47,11 +47,11 @@ export default async function ListingPage({ params }: { params: Promise<{ id: st
   ].slice(0, 4)
 
   return (
-    <div className="bg-[var(--color-indigo)] py-10 sm:py-14">
+    <div className="bg-[var(--color-background)] py-10 sm:py-14">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <Link
           href="/browse"
-          className="inline-flex items-center gap-2 text-sm text-[var(--color-lavender)] transition hover:text-[var(--color-cream)]"
+          className="inline-flex items-center gap-2 text-sm text-[var(--color-olive)] transition hover:text-[var(--color-foreground)]"
         >
           <ArrowLeft className="h-4 w-4" />
           Back to the market
@@ -65,36 +65,36 @@ export default async function ListingPage({ params }: { params: Promise<{ id: st
               {category && (
                 <Link
                   href={`/browse?category=${category.slug}`}
-                  className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)] transition hover:text-[var(--color-cream)]"
+                  className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)] transition hover:text-[var(--color-foreground)]"
                 >
                   {category.name}
                 </Link>
               )}
-              <h1 className="mt-3 font-heading text-4xl leading-tight text-[var(--color-cream)] text-balance sm:text-5xl">
+              <h1 className="mt-3 font-heading text-4xl leading-tight text-[var(--color-foreground)] text-balance sm:text-5xl">
                 {listing.title}
               </h1>
               <p className="mt-4 font-heading text-3xl text-[var(--color-gold)]">€{listing.price}</p>
             </div>
 
             <div className="flex flex-wrap gap-2">
-              <span className="rounded-full border border-[var(--color-gold)]/45 px-3 py-1 text-xs capitalize text-[var(--color-cream)]">
+              <span className="rounded-full border border-[var(--color-gold)]/45 px-3 py-1 text-xs capitalize text-[var(--color-foreground)]">
                 {listing.condition}
               </span>
               {swappable && (
-                <span className="rounded-full bg-[var(--color-gold)] px-3 py-1 text-xs font-medium uppercase tracking-wide text-[var(--color-indigo)]">
+                <span className="rounded-full bg-[var(--color-gold)] px-3 py-1 text-xs font-medium uppercase tracking-wide text-[var(--color-foreground)]">
                   {swapOnly ? "Swap only" : "Open to swaps"}
                 </span>
               )}
             </div>
 
-            <p className="text-base leading-7 text-[var(--color-lavender)]">{listing.description}</p>
+            <p className="text-base leading-7 text-[var(--color-olive)]">{listing.description}</p>
 
             {swappable && listing.swapWants && (
-              <div className="rounded-2xl border border-[var(--color-gold)]/40 bg-[var(--color-plum)]/40 p-5">
-                <h2 className="font-heading text-xl text-[var(--color-cream)]">
+              <div className="rounded-2xl border border-[var(--color-gold)]/40 bg-[var(--color-card)]/40 p-5">
+                <h2 className="font-heading text-xl text-[var(--color-foreground)]">
                   What the seller wants in return
                 </h2>
-                <p className="mt-2 text-sm leading-6 text-[var(--color-lavender)]">
+                <p className="mt-2 text-sm leading-6 text-[var(--color-olive)]">
                   {listing.swapWants}
                 </p>
               </div>
@@ -114,14 +114,14 @@ export default async function ListingPage({ params }: { params: Promise<{ id: st
             {seller && (
               <Link
                 href={`/seller/${seller.id}`}
-                className="flex items-start gap-4 rounded-2xl border border-[var(--color-gold)]/35 bg-[var(--color-plum)]/30 p-5 transition hover:border-[var(--color-gold)]/70"
+                className="flex items-start gap-4 rounded-2xl border border-[var(--color-gold)]/35 bg-[var(--color-card)]/30 p-5 transition hover:border-[var(--color-gold)]/70"
               >
                 <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border border-[var(--color-gold)]/40">
                   <Image src={seller.avatar} alt="" fill sizes="56px" className="object-cover" />
                 </span>
                 <span className="min-w-0 flex-1">
                   <span className="flex flex-wrap items-center gap-2">
-                    <span className="font-heading text-lg text-[var(--color-cream)]">
+                    <span className="font-heading text-lg text-[var(--color-foreground)]">
                       {seller.name}
                     </span>
                     {seller.verifiedMaker && (
@@ -131,7 +131,7 @@ export default async function ListingPage({ params }: { params: Promise<{ id: st
                       </span>
                     )}
                   </span>
-                  <span className="mt-1 flex flex-wrap items-center gap-3 text-xs text-[var(--color-lavender)]">
+                  <span className="mt-1 flex flex-wrap items-center gap-3 text-xs text-[var(--color-olive)]">
                     <span className="inline-flex items-center gap-1">
                       <MapPin className="h-3 w-3" />
                       {seller.location}
@@ -141,7 +141,7 @@ export default async function ListingPage({ params }: { params: Promise<{ id: st
                       {seller.rating.toFixed(1)}
                     </span>
                   </span>
-                  <span className="mt-2 block text-sm leading-6 text-[var(--color-lavender)]">
+                  <span className="mt-2 block text-sm leading-6 text-[var(--color-olive)]">
                     {seller.bio}
                   </span>
                 </span>
@@ -151,7 +151,7 @@ export default async function ListingPage({ params }: { params: Promise<{ id: st
         </div>
 
         <section className="mt-16">
-          <h2 className="font-heading text-2xl text-[var(--color-cream)] sm:text-3xl">
+          <h2 className="font-heading text-2xl text-[var(--color-foreground)] sm:text-3xl">
             More from {category ? category.name : "the market"}
           </h2>
           <div className="mt-6 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">

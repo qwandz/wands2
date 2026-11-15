@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next"
-import { Cormorant_Garamond, Inter } from "next/font/google"
+import { Cormorant_Garamond, Dancing_Script, Inter } from "next/font/google"
 
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
@@ -9,12 +9,18 @@ import "./globals.css"
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-cormorant",
-  weight: ["500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
 })
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+})
+
+const dancing = Dancing_Script({
+  subsets: ["latin"],
+  variable: "--font-dancing",
+  weight: ["500", "600"],
 })
 
 const siteUrl = "https://wands.trade"
@@ -49,8 +55,8 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#1E1B3A",
-  colorScheme: "dark",
+  themeColor: "#FAF6EF",
+  colorScheme: "light",
 }
 
 export default function RootLayout({
@@ -59,7 +65,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${inter.variable} bg-background`}>
+    <html
+      lang="en"
+      className={`${cormorant.variable} ${inter.variable} ${dancing.variable} bg-background`}
+    >
       <body className="bg-background font-body text-foreground antialiased">
         <SiteHeader />
         <main>{children}</main>

@@ -17,13 +17,13 @@ export function ListingGrid({
   if (listings.length === 0) {
     return (
       <div className="rounded-2xl border border-dashed border-[var(--color-gold)]/40 px-6 py-16 text-center">
-        <p className="font-heading text-2xl text-[var(--color-cream)]">Nothing here yet</p>
-        <p className="mx-auto mt-2 max-w-sm text-sm leading-6 text-[var(--color-lavender)]">
+        <p className="font-heading text-2xl text-[var(--color-foreground)]">Nothing here yet</p>
+        <p className="mx-auto mt-2 max-w-sm text-sm leading-6 text-[var(--color-olive)]">
           {emptyMessage}
         </p>
         <Link
           href={clearHref}
-          className="mt-6 inline-flex items-center justify-center rounded-full bg-[var(--color-gold)] px-5 py-2.5 text-sm font-semibold text-[var(--color-indigo)] transition hover:bg-[var(--color-gold)]/90"
+          className="mt-6 inline-flex items-center justify-center rounded-full bg-[var(--color-gold)] px-5 py-2.5 text-sm font-semibold text-[var(--color-foreground)] transition hover:bg-[var(--color-gold)]/90"
         >
           Clear filters
         </Link>

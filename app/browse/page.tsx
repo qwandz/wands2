@@ -21,15 +21,15 @@ export default async function BrowsePage({
   const activeCategory = categories.find((category) => category.slug === filters.category)
 
   return (
-    <div className="bg-[var(--color-indigo)] py-12 sm:py-16">
+    <div className="bg-[var(--color-background)] py-12 sm:py-16">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-gold)]">
           The market
         </p>
-        <h1 className="mt-3 font-heading text-4xl text-[var(--color-cream)] sm:text-5xl">
+        <h1 className="mt-3 font-heading text-4xl text-[var(--color-foreground)] sm:text-5xl">
           {activeCategory ? activeCategory.name : "All listings"}
         </h1>
-        <p className="mt-3 max-w-2xl text-base leading-7 text-[var(--color-lavender)]">
+        <p className="mt-3 max-w-2xl text-base leading-7 text-[var(--color-olive)]">
           Handmade, vintage and pre-loved pieces from makers and collectors across the community.
         </p>
 
@@ -40,7 +40,7 @@ export default async function BrowsePage({
 
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-center justify-between gap-3">
-              <p className="text-sm text-[var(--color-lavender)]">
+              <p className="text-sm text-[var(--color-olive)]">
                 {results.length} {results.length === 1 ? "listing" : "listings"}
               </p>
               <div className="flex items-center gap-2">

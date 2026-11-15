@@ -9,7 +9,7 @@ export function ListingGallery({ images, title }: { images: string[]; title: str
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="relative aspect-square overflow-hidden rounded-3xl border border-[var(--color-gold)]/35 bg-[var(--color-plum)]/40">
+      <div className="relative aspect-square overflow-hidden rounded-3xl border border-[var(--color-gold)]/35 bg-[var(--color-card)]/40">
         <Image
           src={activeImage}
           alt={title}
